@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Concepts</string>
+    <string name="text_click_me">Click me!</string>
+    <string name="text_title">Escribe tu nombre</string>
+</resources>
