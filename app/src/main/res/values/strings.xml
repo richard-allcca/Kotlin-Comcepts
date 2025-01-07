@@ -2,4 +2,11 @@
     <string name="app_name">Concepts</string>
     <string name="text_click_me">Click me!</string>
     <string name="text_title">Escribe tu nombre</string>
+    <string name="text_view_male">Hombre</string>
+    <string name="text_view_female">Mujer</string>
+    <string name="description_view_male">Icono de hombre</string>
+    <string name="description_view_female">Icono de mujer</string>
+    <string name="height_text">Altura</string>
+    <string name="peso_text">Peso</string>
+    <string name="edad_text">Edad</string>
 </resources>

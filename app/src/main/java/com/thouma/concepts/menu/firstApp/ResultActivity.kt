@@ -1,4 +1,4 @@
-package com.thouma.concepts.firstapp
+package com.thouma.concepts.menu.firstApp
 
 import android.os.Bundle
 import android.widget.TextView
@@ -25,6 +25,5 @@ class ResultActivity : AppCompatActivity() {
         val name: String = intent.extras?.getString("EXTRA_NAME").orEmpty()
 
         textResult.text = "Hola $name"
-
     }
 }
