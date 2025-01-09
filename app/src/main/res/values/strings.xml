@@ -9,4 +9,5 @@
     <string name="height_text">Altura</string>
     <string name="peso_text">Peso</string>
     <string name="edad_text">Edad</string>
+    <string name="btn_calculate_text">Calculate</string>
 </resources>

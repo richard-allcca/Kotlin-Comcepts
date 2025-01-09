@@ -1,6 +1,8 @@
 package com.thouma.concepts.menu.bodycalculator
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -18,8 +20,10 @@ class BodyCalculatorActivity : AppCompatActivity() {
     private lateinit var btnAddWeight: FloatingActionButton
     private lateinit var btnSubtractAge: FloatingActionButton
     private lateinit var btnAddAge: FloatingActionButton
+    private lateinit var tvHeight: TextView
     private lateinit var tvWeight: TextView
     private lateinit var tvAge: TextView
+    private lateinit var btnCalculate: Button
 
     private var currentWeight: Int = 60
     private var currentAge: Int = 26
@@ -44,9 +48,12 @@ class BodyCalculatorActivity : AppCompatActivity() {
         btnSubtractWeight = findViewById(R.id.btnSubtractWeight)
         btnAddWeight = findViewById(R.id.btnAddWeight)
         btnSubtractAge = findViewById(R.id.btnSubtractAge)
+        tvHeight = findViewById(R.id.tv_height)
         btnAddAge = findViewById(R.id.btnAddAge)
         tvWeight = findViewById(R.id.tv_weight)
         tvAge = findViewById(R.id.tv_age)
+        btnCalculate = findViewById(R.id.btnCalculate)
+
 
         tvWeight.text = currentWeight.toString()
         tvAge.text = currentAge.toString()
@@ -76,6 +83,19 @@ class BodyCalculatorActivity : AppCompatActivity() {
             currentAge += 1
             tvAge.text = currentAge.toString()
         }
+        btnCalculate.setOnClickListener {
+            // Calcular el IMC (indice de masa corporal) usando la fórmula: peso / altura^2
+            val height = tvHeight.text.slice(0..2).toString().toFloat() / 100
+            println("Altura: $height")
+            val weight = tvWeight.text.toString().toFloat()
+            val imc = weight / (height * height)
+            println("%.2f".format(imc))
+            // Mostrar el resultado en una nueva vista
+            val intent = Intent(this, ResultImcActivity::class.java)
+            intent.putExtra("imc", "%.2f".format(imc))
+            startActivity(intent)
+        }
+
     }
 
     private fun setBackgroundColor(maleSelected: Boolean) {
