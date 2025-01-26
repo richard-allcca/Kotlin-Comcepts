@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:padding="8dp"
-        android:text="Saludar"
+        android:text="Saludo"
         android:textSize="24sp" />
 
     <Button
@@ -26,6 +26,15 @@
         android:layout_marginTop="10dp"
         android:padding="8dp"
         android:text="calculator"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/todo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:text="todo"
         android:textSize="24sp" />
 
 </LinearLayout>

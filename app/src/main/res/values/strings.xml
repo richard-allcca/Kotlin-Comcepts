@@ -10,4 +10,11 @@
     <string name="peso_text">Peso</string>
     <string name="edad_text">Edad</string>
     <string name="btn_calculate_text">Calculate</string>
+
+<!--  Task  -->
+
+    <string name="todo_dialog_category_business">business</string>
+    <string name="todo_dialog_category_personal">personal</string>
+    <string name="todo_dialog_category_other">other</string>
+
 </resources>

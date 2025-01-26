@@ -10,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.thouma.concepts.R
 import com.thouma.concepts.menu.firstApp.FirstScreenActivity
 import com.thouma.concepts.menu.bodycalculator.BodyCalculatorActivity
+import com.thouma.concepts.menu.todoApp.TodoActivity
 
 class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,6 +25,7 @@ class MenuActivity : AppCompatActivity() {
 
         val firstBtn = findViewById<Button>(R.id.firstBtn)
         val secondBtn = findViewById<Button>(R.id.calculator)
+        val thirdBtn = findViewById<Button>(R.id.todo)
 
         fun navigateToFirstScreen() {
             val intent = Intent(this, FirstScreenActivity::class.java)
@@ -35,8 +37,14 @@ class MenuActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        fun navigateToTodo() {
+            val intent = Intent(this, TodoActivity::class.java)
+            startActivity(intent)
+        }
+
         firstBtn.setOnClickListener { navigateToFirstScreen() }
         secondBtn.setOnClickListener { navigateToBodyCalculator() }
+        thirdBtn.setOnClickListener { navigateToTodo() }
 
     }
 }
